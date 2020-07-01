@@ -40,7 +40,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 .home .wrap-banner .main-title {
   color: #fff;
@@ -402,6 +402,9 @@ a:hover {
 .footer {
   padding: 60px 30px;
   text-align: center;
+}
+.footer a {
+  color: #03b988;
 }
 
 /* ============== 404 Notfound ============== */
