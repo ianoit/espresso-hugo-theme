@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{ partial "head.html" . }}
+
+</head>
+
+<body class="home">
+
+    {{ partial "nav.html" . }}
+    <div class="overlay">
+    </div>
+    <div class="wrap-banner">
+        <div class="main-title">
+            <center>
+                <img class="img-rounded" src="{{ .Site.Author.avatar }}" alt="">
+                <h1>Hello I'm ianoit</h1>
+                <p class="subtitle">
+                    do you like coffee ?
+                </p>
+                
+            </center>
+        </div>
+    </div>
+
+    <div class="social">
+        <a href="https://www.instagram.com/yuliansafarudin" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.twitter.com/yuliansfrdn" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.github.com/ianoit" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/yulian-safarudin-287aa1148/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+    
+    {{ partial "js-init.html" . }}
+</body>
+
+</html>

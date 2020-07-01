@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="post-item row">
+        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) 6 }}
+        {{ range $paginator.Pages }}
+
+        <article class="ui-post entry col-md-4 card-container">
+            <meta itemprop="mainEntityOfPage" content="{{ .RelPermalink }}">
+            <div class="entry card h-100">
+                <div class="card-header-image">
+                    <a href="{{ .RelPermalink }}" class="">
+                        <img src="{{ .Params.Image }}">
+                    </a>
+                </div>
+                <div class="card-inside">
+                    <h2 class="heading">
+                        <a href="{{ .RelPermalink }}" class="heading">{{ .Title }}</a>
+                    </h2>
+                    <p>{{ .Content | safeHTML | truncate 75 }}</p>
+                </div>
+                <div class="meta-bottom mt-auto">
+
+                    {{ partial "avatar.html" . }}
+                    
+                </div>
+            </div>
+        </article>
+
+        {{ end }}
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    {{ partial "pagination.html" . }}
+</div>

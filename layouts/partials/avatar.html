@@ -1,0 +1,15 @@
+<div class="avatar">
+	<div class="d-flex">
+		<a class="profile-avatar">
+			<img src="{{ .Params.Avatar }}" alt="{{ .Params.Author }}" class="avatar-image">
+		</a>
+		<div>
+			<span class="username">{{ .Params.Author }}</span> &nbsp;
+		</div>
+	</div>
+	<div class="date">
+		<time pubdate="" itemprop="datePublished">
+			{{ .Date.Format "02 January 2006" }} &middot; dibaca normal {{ .ReadingTime }} menit
+		</time>
+	</div>
+</div>

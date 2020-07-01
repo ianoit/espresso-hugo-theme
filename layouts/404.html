@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body onload="getMsg()">
+
+    {{ partial "nav.html" . }}
+    
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>404</h1>
+            </div>
+            <h2 id="msg"></h2>
+            <br>
+            <a class="btn" href="/">
+                Back To Homepage
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        function getMsg () {
+            const msgs = [
+                `There's nothing here.`,
+                `How did we get here?`,
+                `That's a Four-Oh-Four.`,
+                `Looks like we've got some broken links.`
+            ]
+            document.getElementById("msg").innerHTML = msgs[Math.floor(Math.random() * msgs.length)]
+        }
+    </script>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js-init.html" . }}
+</body>
+</html>

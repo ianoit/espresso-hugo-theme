@@ -1,0 +1,15 @@
+[
+    {{ range $index, $value := where .Site.Pages "Type" "blog" }}
+    {{ if $index }}, {{ end }}
+    {
+        "url": "{{ .RelPermalink }}",
+        "title": "{{ .Title }}",
+        "image": "{{ .Params.Image }}",
+        "author": "{{ .Params.author }}",
+        "avatar": "{{ .Params.avatar }}",
+        "date": "{{ .Date }}",
+        "readingtime": "{{ .ReadingTime }}",
+        "content": {{ .Content | plainify | jsonify }}
+    }
+    {{ end }}
+]

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+
+    {{ partial "nav.html" . }}
+    
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>404</h1>
+            </div>
+            <h2 id="msg">Coming Soon</h2>
+            <br>
+            <a class="btn" href="/">
+                Back To Homepage
+            </a>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js-init.html" . }}
+</body>
+</html>

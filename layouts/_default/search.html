@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+
+    {{ partial "nav.html" . }}
+
+    <div class="container" style="min-height: 500px; margin-top: 120px; margin-bottom: 50px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input class="form-control" id="search-input" type="text" placeholder="Ketik kata kunci" name="search">
+                </div>
+
+                <div id="search-results" class="search" style="margin-top: 50px;">
+                    <center>
+                        <img src="/img/search.webp" class="img-responsive" width="40%">
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "js-init.html" . }}
+</body>
+</html>
